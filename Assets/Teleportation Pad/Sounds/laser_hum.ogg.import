@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3m8hsqj8h8oi"
+path="res://.godot/imported/laser_hum.ogg-9ea25e2e9a3428ae295ee44fcdce79da.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Teleportation Pad/Sounds/laser_hum.ogg"
+dest_files=["res://.godot/imported/laser_hum.ogg-9ea25e2e9a3428ae295ee44fcdce79da.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

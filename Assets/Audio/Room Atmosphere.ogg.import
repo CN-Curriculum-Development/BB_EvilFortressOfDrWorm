@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ux3cl6k6vfqj"
+path="res://.godot/imported/Room Atmosphere.ogg-875ad50682a6f361520d56d8fffb0bfc.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Room Atmosphere.ogg"
+dest_files=["res://.godot/imported/Room Atmosphere.ogg-875ad50682a6f361520d56d8fffb0bfc.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

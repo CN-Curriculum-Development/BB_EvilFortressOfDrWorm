@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://chylfv0wjos50"]
+
+[ext_resource type="PackedScene" uid="uid://cunducpvmc1ml" path="res://Assets/Prefabs/ShortWall.fbx" id="1_tydvs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d5x1h"]
+size = Vector3(9.95436, 2.51563, 0.998596)
+
+[node name="long_wall" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98235, 1.24219, -10.5363)
+shape = SubResource("BoxShape3D_d5x1h")
+
+[node name="ShortWall" parent="." instance=ExtResource("1_tydvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11)
+
+[node name="ShortWall2" parent="." instance=ExtResource("1_tydvs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -11)
