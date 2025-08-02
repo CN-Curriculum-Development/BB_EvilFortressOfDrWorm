@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbhe75a3i4amm"]
+
+[ext_resource type="PackedScene" uid="uid://n5tlcckk2uqx" path="res://Assets/Models/DoorTriangle.fbx" id="1_cm7ql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8bwfx"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ccws"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="DoorTriangle" instance=ExtResource("1_cm7ql")]
+
+[node name="DoorTriangle" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8bwfx")
+surface_material_override/1 = SubResource("StandardMaterial3D_2ccws")

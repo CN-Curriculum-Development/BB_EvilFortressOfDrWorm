@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c83hs1m6ry507"]
+[gd_scene load_steps=16 format=3 uid="uid://c83hs1m6ry507"]
 
 [ext_resource type="Texture2D" uid="uid://cenxcvkbaeiny" path="res://Assets/Textures/Floor.png" id="1_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://bxvooapu4hwo1" path="res://scene_templates/short_wall.tscn" id="2_bjebc"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cunducpvmc1ml" path="res://Assets/Prefabs/ShortWall.fbx" id="4_gyffv"]
 [ext_resource type="Texture2D" uid="uid://d0da347kredda" path="res://Assets/Textures/doorIconGreen.png" id="5_1pe0h"]
 [ext_resource type="Texture2D" uid="uid://bwfog8qvryoee" path="res://Assets/Textures/doorIcon.png" id="6_27bay"]
-[ext_resource type="PackedScene" uid="uid://cvnaor0rwgeks" path="res://Assets/Teleportation Pad/Model/Teleporter Pad fbx.fbx" id="7_sof0w"]
+[ext_resource type="PackedScene" uid="uid://dxv1gvfhjvk2a" path="res://scene_templates/teleporter.tscn" id="7_0urlm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2c62f"]
 size = Vector3(2.01794, 0.0352173, 2.01294)
@@ -31,9 +31,6 @@ size = Vector3(2.0499, 2.29944, 0.294922)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjkv5"]
 albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_00ld1"]
-height = 0.170898
 
 [node name="level_1" type="Node3D"]
 
@@ -248,14 +245,5 @@ transform = Transform3D(2.04598, 0, 0, 0, 2.5605, 0, 0, 0, 0.172471, 0, 0, 0)
 mesh = SubResource("BoxMesh_lhbbi")
 surface_material_override/0 = SubResource("StandardMaterial3D_gjkv5")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2735, 9.53674e-07, -9.9314)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0999236, 0)
-shape = SubResource("CylinderShape3D_00ld1")
-
-[node name="Teleporter Pad fbx" parent="StaticBody3D/CollisionShape3D" instance=ExtResource("7_sof0w")]
-transform = Transform3D(20, 0, 0, 0, 46.4969, 0, 0, 0, 20, 0, -0.102105, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+[node name="teleporter" parent="." instance=ExtResource("7_0urlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5333, 0.0231961, -9.86543)

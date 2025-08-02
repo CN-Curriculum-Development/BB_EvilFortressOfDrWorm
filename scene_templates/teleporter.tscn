@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxv1gvfhjvk2a"]
+
+[ext_resource type="PackedScene" uid="uid://cvnaor0rwgeks" path="res://Assets/Teleportation Pad/Model/Teleporter Pad fbx.fbx" id="1_y51f4"]
+[ext_resource type="PackedScene" uid="uid://or6p2fs6aqjd" path="res://teleporter_pad_fbx.tscn" id="2_uohg2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_00ld1"]
+height = 0.170898
+
+[node name="teleporter" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0999236, 0)
+shape = SubResource("CylinderShape3D_00ld1")
+
+[node name="Teleporter Pad fbx" parent="CollisionShape3D" instance=ExtResource("1_y51f4")]
+transform = Transform3D(20, 0, 0, 0, 46.4969, 0, 0, 0, 20, 0, -0.102105, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+
+[node name="Teleporter Pad fbx2" parent="CollisionShape3D" instance=ExtResource("2_uohg2")]
+transform = Transform3D(30.955, 0, 0, 0, 80.3065, 0, 0, 0, 30.955, 0, -0.0905945, 0)
